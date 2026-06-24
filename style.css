@@ -133,7 +133,8 @@ body {
 
 .rodape-redes {
     display: flex;
-    gap: 8px; 
+    flex-direction: column;
+    gap: 10px; 
 }
 
 .link-rede {
