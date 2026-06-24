@@ -1,0 +1,159 @@
+/* Reset básico para remover margens padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fcfcfc;
+}
+
+/* --- Estilização do Cabeçalho --- */
+.cabecalho {
+    /* Cor Vermelho Rubro */
+    background-color: #9B111E; 
+    /* Altura fixa confortável para o cabeçalho */
+    height: 130px; 
+    padding: 0 20px;
+    
+    /* Flexbox para alinhar a imagem e o texto lado a lado */
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho-logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho-img {
+    max-height: 100px; 
+    width: auto;
+    object-fit: contain; 
+    border-radius: 4px; 
+}
+
+/* Estilização do Texto do Cabeçalho */
+.cabecalho-titulo {
+    color: #F8F9FA; /* Off-white */
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- Estilização do Corpo do Site --- */
+.conteudo-principal {
+    padding: 40px 25px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo em telas grandes */
+}
+
+/* Parágrafo explicativo em cinza escuro */
+.texto-introducao {
+    color: #333333; 
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px; 
+}
+
+/* Seção com fundo Vermelho Carmesim */
+.secao-artigos {
+    background-color: #DC143C; /* Vermelho Carmesim */
+    padding: 30px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Título da seção "Artigos Científicos:" */
+.titulo-artigos {
+    color: #F8F9FA; /* Off-white */
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(248, 249, 250, 0.3); /* Linha divisória discreta */
+    padding-bottom: 10px;
+}
+
+/* Lista de artigos */
+.lista-artigos {
+    list-style-type: none; /* Remove as bolinhas da lista */
+}
+
+.item-artigo {
+    margin-bottom: 15px;
+}
+
+/* Links dos PDFs (Textos em Branco) */
+.link-pdf {
+    color: #FFFFFF; 
+    font-size: 1.15rem;
+    text-decoration: none; 
+    display: inline-block;
+    transition: opacity 0.2s ease;
+}
+
+/* Efeito visual ao passar o mouse */
+.link-pdf:hover {
+    text-decoration: underline; 
+    opacity: 0.9;
+}
+
+
+/* --- Estilização do Rodapé --- */
+.rodape {
+    /* Cor Vermelho Rubro (Igual ao cabeçalho) */
+    background-color: #9B111E; 
+    padding: 30px 25px;
+    margin-top: 40px; /* Garante que o rodapé não grude no conteúdo */
+    
+    /* Alinhamento Flexbox */
+    display: flex;
+    justify-content: space-between; /* Texto de um lado, redes do outro */
+    align-items: center;
+    flex-wrap: wrap; /* Se a tela for pequena, eles quebram de linha suavemente */
+    gap: 20px;
+    
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15); /* Sombra sutil invertida (para cima) */
+}
+
+
+.rodape-texto {
+    color: #F8F9FA; 
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 60%; 
+}
+
+
+.rodape-redes {
+    display: flex;
+    gap: 20px; 
+}
+
+.link-rede {
+    color: #F8F9FA; /* Off-white */
+    font-size: 1.05rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.link-rede:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+    }
+    .rodape-texto {
+        max-width: 100%;
+    }
+}
